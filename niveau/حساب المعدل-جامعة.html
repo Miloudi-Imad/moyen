@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script>
+    function run(){
+        
+        var m_t = Number(document.getElementById("t1").value)+Number(document.getElementById("t2").value);
+        m_t/=2;
+        document.getElementById("mt").value=m_t;
+        m_t+=Number(document.getElementById("m1").value)+Number(document.getElementById("m2").value);
+        m_t/=3;
+        document.getElementById("mk").value=m_t;
+        if(m_t==0){alert("توجد فراغات يرجى ملئها");}else if(isNaN(m_t)){alert("يوجد خطأ");}else{}
+    }
+    </script>
+<style>
+    body{
+        background-image: url("123.jpg");
+    }
+    #title{
+        background-color: greenyellow;
+        font-size: 50px;
+        border-radius: 200px;
+    }
+    #title:hover{
+        transition: 0.3s;
+        background-color: orange;
+        color: white;
+    }
+    input{
+        width: 64px;
+       font-size: 25px;
+       border-radius:10px;
+       border-color: greenyellow;
+       background-color: rgb(231, 240, 243);
+    }input:hover{
+            transition: 0.3s;
+            background-color: orange;
+            color:white;
+        }
+        p{
+            border-radius: 50px;
+            font-size: 25px;
+        }p:hover{
+            transition: 0.25s;
+            background-color: orange;
+            color: white;
+        }
+        #button{
+            width: 200px;
+            height:50px;
+            background-color: lightgray
+        }
+        #button:hover{
+            transition: 0.3s;
+            color: white;
+            background-color: orange;
+        }
+        table{
+            border:1px solid black;
+            border-radius:10px;
+            height: 44px;
+            background-color: greenyellow;
+            
+        }
+        td{
+            border:1px solid black;
+            border-radius: 10px;
+            height: 42px;
+            background-color: white;
+        }
+        #mk,#mt{
+            height: 35px;
+        }
+</style>
+<body>
+        <div align="center" id="title"><h4><font face="Aref Ruqaa">حساب المعدل-جامعة</font></h4></div>
+        <div align="center">
+            <input type="text" id="t2"><p id="p" style="display: inline; padding-right: 20px;padding-left: 20px;">تطبيق 1</p>
+            <input type="text" id="t1"><p id="p" style="display: inline; padding-right: 20px;padding-left: 20px;">تطبيق 2</p><br><br><br>
+            <input type="text" id="m2"><p id="p" style="display: inline; padding-right: 10px;padding-left: 10px;">محاضرة 1</p>
+            <input type="text" id="m1"><p id="p" style="display: inline; padding-right: 10px;padding-left: 15px;">محاضرة 2</p><br><table><tr><td>
+            <input type="text" id="mk"></td><td><p id="p" style="display: inline; padding-right: 20px;padding-left: 20px;">المعدل الكلي</p></td></tr>
+            <tr>
+                <td ><input type="text" id="mt" ></td><td><p id="p" style="display: inline; padding-right: 10px;padding-left: 15px;">معدل التطبيقات</p></td>
+            <tr><br>
+            </table><br><input type="button" onclick="run()" value="حساب المعدل" id="button">
+        </div>
+</body>
+</html>

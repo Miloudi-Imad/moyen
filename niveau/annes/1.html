@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url("123.jpg");
+        }
+        #header{
+            background-color: greenyellow;
+            border-radius: 200px;
+        }
+        #header:hover{
+            transition: 0.5s;
+            background-color: orange;
+            color: white;
+        }
+        p{
+            border-radius: 50px;
+            padding: 0px;
+            width: 350px;
+            background-color: greenyellow;
+        }
+        p:hover{
+            transition: 0.5s;
+            background-color: orange;
+            color: white;
+        }
+        input{
+            width: 430px;
+            padding: 10px;
+            font-size: 40px;
+            background-color: orange;
+            border-color: yellow;
+            border-radius: 500px;
+            color: white;
+        }
+        input:hover{
+            transition: 0.3s;
+            font-size: 45px;
+        }
+        .myBtn{
+            height: 25px;
+            width: 25px;
+            font-size: 10px;
+        }
+        #int{
+            padding: 5px;
+        }
+    </style> 
+    <script>
+        window.onload=function(){var d = new Date(); 
+          
+          document.getElementById("int").innerHTML = d.toLocaleTimeString();}
+window.setInterval(function(){
+  time();
+}, 1000);
+function time(){var d = new Date(); 
+          
+    document.getElementById("int").innerHTML = d.toLocaleTimeString();
+}
+
+            function h() {
+alert("this webSite was developed by Miloudi");            }
+           
+
+
+            
+            </script> 
+</head>
+
+<body id="bodyy" align="center">
+        <div align="center" id="header"><input type="button" style="float: left;" value="i" onclick="h()" class="myBtn"></input>
+        <h4><font face="aref ruqaa" size="20px">حساب المعدل</font></h4></div>
+        <div align="center" id="chooser"><p><font size="15">إختر السنة</font></p></div>
+        <br><br><br><br>
+        <a href="1/science1.html"><input type="button" value=" جذع مشترك علوم تكنلوجيا  "></input></a><br><br>
+        <a href="1/lettre1.html"><input type="button" value="  جذع مشترك اداب  "></input></a><br><br>
+        <div align="center">
+        <p id="int"></p>
+        </div>
+
+</body>
+</html>

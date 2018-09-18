@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>برنامج حساب المعدل</title>
+    <style>
+    #title
+    {background-color:greenyellow; font-size:50px;}
+    body
+    {background-image:url("123.jpg");
+    
+    /* Full height */
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-repeat: no-repeat;
+
+    }
+    #title{
+        border-radius:200px;
+        
+    }
+    input{
+        width: 64px;
+       font-size: 25px;
+       border-radius:10px;
+       border-color: greenyellow;
+       background-color: rgb(231, 240, 243);
+    }
+    p{
+        display: inline;
+        font-size: 20px;
+        padding:11px;
+        border-radius: 100px;
+        text-align: right;
+        align-content:right; 
+    }
+        
+        #mo3adell{
+            width: 100px;
+        }
+        #majmo33{
+            width: 100px;
+
+        }
+        /*butoon animation  */
+        #butoon{
+            transition:0.5s;
+        }
+        #butoon:hover {
+            background-color: orange;
+            color: white;
+        }
+        #title:hover{
+            transition: 0.5s;
+            background-color: orange;
+            color: white;
+        }
+        p:hover{
+            transition: 0.5s;
+            background-color: orange;
+            color: white;
+        }
+        input:hover{
+            transition: 0.5s;
+            background-color: orange;
+            color:white;
+        }
+        table{
+            border:1px solid black;
+            border-radius: 25px;
+            height: 44px;
+            background-color: greenyellow;
+            
+        }
+        td{
+            border:1px solid black;
+            border-radius: 50px;
+            height: 42px;
+            background-color: white;
+        }
+        input{
+            width: 70px;
+        }
+
+    </style>
+    <script>
+
+        function run(){
+            var majmo33=0;
+
+            //arabic
+            var ar_mf = Number(document.getElementById("ar_test2").value);
+            document.getElementById("ar_m_m_m").value=ar_mf;
+            ar_mf+=Number(document.getElementById("ar_m_m").value);
+            ar_mf+=(Number(document.getElementById("ar_test").value))*2;
+            ar_mf/=4;
+            document.getElementById("ar_m_f").value=ar_mf;
+            ar_mf*=Number(document.getElementById("ar_mo3amel").value);
+            document.getElementById("ar_majmo3").value=ar_mf;
+            majmo33+=ar_mf;
+
+            //francais
+            var fr_mf = Number(document.getElementById("fr_test2").value);
+            document.getElementById("fr_m_m_m").value=fr_mf;
+            fr_mf+=Number(document.getElementById("fr_m_m").value);
+            fr_mf+=(Number(document.getElementById("fr_test").value))*2;
+            fr_mf/=4;
+            document.getElementById("fr_m_f").value=fr_mf;
+            fr_mf*=Number(document.getElementById("fr_mo3amel").value);
+            document.getElementById("fr_majmo3").value=fr_mf;
+            majmo33+=fr_mf;
+
+            //anglais
+            var an_mf = Number(document.getElementById("an_test2").value);
+            document.getElementById("an_m_m_m").value=an_mf;
+            an_mf+=Number(document.getElementById("an_m_m").value);
+            an_mf+=(Number(document.getElementById("an_test").value))*2;
+            an_mf/=4;
+            document.getElementById("an_m_f").value=an_mf;
+            an_mf*=Number(document.getElementById("an_mo3amel").value);
+            document.getElementById("an_majmo3").value=an_mf;
+            majmo33+=an_mf;
+            
+            //islamya
+            var is_mf = Number(document.getElementById("is_test2").value);
+            document.getElementById("is_m_m_m").value=is_mf;
+            is_mf+=Number(document.getElementById("is_m_m").value);
+            is_mf+=(Number(document.getElementById("is_test").value))*2;
+            is_mf/=4;
+            document.getElementById("is_m_f").value=is_mf;
+            is_mf*=Number(document.getElementById("is_mo3amel").value);
+            document.getElementById("is_majmo3").value=is_mf;
+            majmo33+=is_mf;
+
+            //history
+            var ht_mf = Number(document.getElementById("ht_test2").value);
+            document.getElementById("ht_m_m_m").value=ht_mf;
+            ht_mf+=Number(document.getElementById("ht_m_m").value);
+            ht_mf+=(Number(document.getElementById("ht_test").value))*2;
+            ht_mf/=4;
+            document.getElementById("ht_m_f").value=ht_mf;
+            ht_mf*=Number(document.getElementById("ht_mo3amel").value);
+            document.getElementById("ht_majmo3").value=ht_mf;
+            majmo33+=ht_mf;
+
+            //math
+            var mt_mf = ((Number(document.getElementById("mt_test2").value)+ Number(document.getElementById("mt_test1").value))/2);
+            document.getElementById("mt_m_m_m").value=mt_mf;
+            mt_mf+=Number(document.getElementById("mt_m_m").value);
+            mt_mf+=(Number(document.getElementById("mt_test").value))*2;
+            mt_mf/=4;
+            document.getElementById("mt_m_f").value=mt_mf;
+            mt_mf*=Number(document.getElementById("mt_mo3amel").value);
+            document.getElementById("mt_majmo3").value=mt_mf;
+            majmo33+=mt_mf;
+
+            //science
+            var sc_mf = ((Number(document.getElementById("sc_test2").value)+ Number(document.getElementById("sc_test1").value))/2);
+            document.getElementById("sc_m_m_m").value=sc_mf;
+            sc_mf+=Number(document.getElementById("sc_m_m").value);
+            sc_mf+=Number(document.getElementById("sc_at").value);
+            sc_mf+=(Number(document.getElementById("sc_test").value))*2;
+            sc_mf/=5;
+            document.getElementById("sc_m_f").value=sc_mf;
+            sc_mf*=Number(document.getElementById("sc_mo3amel").value);
+            document.getElementById("sc_majmo3").value=sc_mf;
+            majmo33+=sc_mf;
+
+            //physics
+            var ph_mf = ((Number(document.getElementById("ph_test2").value)+ Number(document.getElementById("ph_test1").value))/2);
+            document.getElementById("ph_m_m_m").value=ph_mf;
+            ph_mf+=Number(document.getElementById("ph_m_m").value);
+            ph_mf+=Number(document.getElementById("ph_at").value);
+            ph_mf+=(Number(document.getElementById("ph_test").value))*2;
+            ph_mf/=5;
+            document.getElementById("ph_m_f").value=ph_mf;
+            ph_mf*=Number(document.getElementById("ph_mo3amel").value);
+            document.getElementById("ph_majmo3").value=ph_mf;
+            majmo33+=ph_mf;
+
+             //techno
+             var th_mf = ((Number(document.getElementById("th_test2").value)));
+            document.getElementById("th_m_m_m").value=th_mf;
+            th_mf+=Number(document.getElementById("th_m_m").value);
+            th_mf+=Number(document.getElementById("th_at").value);
+            th_mf+=(Number(document.getElementById("th_test").value))*2;
+            th_mf/=5;
+            document.getElementById("th_m_f").value=th_mf;
+            th_mf*=Number(document.getElementById("th_mo3amel").value);
+            document.getElementById("th_majmo3").value=th_mf;
+            majmo33+=th_mf;
+
+             //informatique
+             var in_mf = ((Number(document.getElementById("in_test2").value)));
+            document.getElementById("in_m_m_m").value=sc_mf;
+            in_mf+=Number(document.getElementById("in_m_m").value);
+            in_mf+=Number(document.getElementById("in_at").value);
+            in_mf+=(Number(document.getElementById("in_test").value))*2;
+            in_mf/=5;
+            document.getElementById("in_m_f").value=in_mf;
+            in_mf*=Number(document.getElementById("in_mo3amel").value);
+            document.getElementById("in_majmo3").value=in_mf;
+            majmo33+=in_mf;
+
+            //sport
+            var sp_mf = ((Number(document.getElementById("sp_test2").value)));
+            document.getElementById("sp_m_m_m").value=sp_mf;
+            sp_mf+=Number(document.getElementById("sp_m_m").value);
+            sp_mf+=(Number(document.getElementById("sp_test").value))*2;
+            sp_mf/=4;
+            document.getElementById("sp_m_f").value=sp_mf;
+            sp_mf*=Number(document.getElementById("sp_mo3amel").value);
+            document.getElementById("sp_majmo3").value=sp_mf;
+            majmo33+=sp_mf;
+
+            var m_mo3amilat = Number(document.getElementById("ar_mo3amel").value)+
+            Number(document.getElementById("fr_mo3amel").value)+
+            Number(document.getElementById("an_mo3amel").value)+
+            Number(document.getElementById("is_mo3amel").value)+
+            Number(document.getElementById("ht_mo3amel").value)+
+            Number(document.getElementById("mt_mo3amel").value)+
+            Number(document.getElementById("sc_mo3amel").value)+
+            Number(document.getElementById("ph_mo3amel").value)+
+            Number(document.getElementById("th_mo3amel").value)+
+            Number(document.getElementById("in_mo3amel").value)+
+            Number(document.getElementById("sp_mo3amel").value);
+
+            document.getElementById("majmo33").value=majmo33;
+            document.getElementById("mo3adell").value=Number(majmo33/m_mo3amilat);
+        }
+        
+    </script>
+</head>
+<body>
+    <div align="center" id="title" ><h4><font face="Aref Ruqaa">حساب المعدل - ثانوي</font></h4></div>
+    <br>
+    <div align="center">
+            <table>
+                <tr>
+    <td><p align="center">م.الفروض : معدل الفروض</p></td>
+    <td><p align="center">م.م : المراقبة المستمرة</p></td>
+    <td><p align="center">م.فصلي : المعدل الفصلي</p></td>
+    </tr>
+    <table id="t">
+    <tr>
+        <td><p style="text-align: center;">    لايمكن تغيير قيمة : المجموع ,المعدل الفصلي و معدل المراقبة المستمرة</p></td><td><p style="text-align: center;">أ.تطبيقية : أعمال تطبيقية</p></td>
+    </tr>
+</table>    
+    </table>
+    </div>
+    <br><br>
+
+    <div id="GUI" align="center">
+
+        <!--first row-->
+        
+        <p>المادة  </p>
+        <p>م.م</p>
+        <p>أ.تطبيقية</p>
+        <p> فرض 1</p>
+        <p>فرض 2</p>
+        <p>م.الفروض</p>
+        <p>الإختبار</p>
+        <p>م.فصلي</p>
+        <p>المعامل</p>
+        <p>المجموع</p>
+
+        <!--arabic--><br><br>
+        <p></p><p></p>
+        <input id="ar_majmo3" type = "text" disabled ></input>
+        <input id="ar_mo3amel" type = "text"></input>
+        <input id="ar_m_f" type = "text" disabled ></input>
+        <input id="ar_test" type = "text"></input>
+        <input id="ar_m_m_m" type = "text" disabled ></input>
+        <input id="ar_test2" type = "text"></input>
+        <input id="ar_test1" type = "text"disabled></input>
+        <input id="ar_at" type = "text"disabled></input>
+        <input id="ar_m_m" type = "text"></input>
+        <p>     عربية</p>
+
+        <!--math--><br><br>
+        <p></p><p></p>
+        <input id="mt_majmo3" type = "text"disabled ></input>
+        <input id="mt_mo3amel" type = "text"></input>
+        <input id="mt_m_f" type = "text"disabled ></input>
+        <input id="mt_test" type = "text"></input>
+        <input id="mt_m_m_m" type = "text"disabled ></input>
+        <input id="mt_test2" type = "text"></input>
+        <input id="mt_test1" type = "text"></input>
+        <input id="ars_at" type = "text"disabled></input>
+        <input id="mt_m_m" type = "text"></input>
+        <p>رياضيات</p>
+
+        <!--physics--><br><br>
+        <p></p><p></p>
+        <input id="ph_majmo3" type = "text"disabled ></input>
+        <input id="ph_mo3amel" type = "text"></input>
+        <input id="ph_m_f" type = "text"disabled ></input>
+        <input id="ph_test" type = "text"></input>
+        <input id="ph_m_m_m" type = "text"disabled ></input>
+        <input id="ph_test2" type = "text"></input>
+        <input id="ph_test1" type = "text"></input>
+        <input id="ph_at" type = "text"></input>
+        <input id="ph_m_m" type = "text"></input>
+        <p>     فيزياء</p>    
+
+        <!--science--><br><br>
+        <p></p><p></p>
+        <input id="sc_majmo3" type = "text"disabled ></input>
+        <input id="sc_mo3amel" type = "text"></input>
+        <input id="sc_m_f" type = "text"disabled ></input>
+        <input id="sc_test" type = "text"></input>
+        <input id="sc_m_m_m" type = "text"disabled ></input>
+        <input id="sc_test2" type = "text"></input>
+        <input id="sc_test1" type = "text" ></input>
+        <input id="sc_at" type = "text"></input>
+        <input id="sc_m_m" type = "text"></input>
+        <p>      علوم</p>
+
+        <!--islamya--><br><br>
+        <p></p><p></p>
+        <input id="is_majmo3" type = "text"disabled ></input>
+        <input id="is_mo3amel" type = "text"></input>
+        <input id="is_m_f" type = "text"disabled ></input>
+        <input id="is_test" type = "text"></input>
+        <input id="is_m_m_m" type = "text"disabled ></input>
+        <input id="is_test2" type = "text"></input>
+        <input id="is_test1" type = "text"disabled ></input>
+        <input id="is_at" type = "text"disabled></input>
+        <input id="is_m_m" type = "text"></input>
+        <p>   شريعة</p>
+
+         <!--history--><br><br>
+         <p></p><p></p>
+         <input id="ht_majmo3" type = "text"disabled ></input>
+         <input id="ht_mo3amel" type = "text"></input>
+         <input id="ht_m_f" type = "text"disabled></input>
+         <input id="ht_test" type = "text"></input>
+         <input id="ht_m_m_m" type = "text"disabled ></input>
+         <input id="ht_test2" type = "text"></input>
+         <input id="ht_test1" type = "text"disabled ></input>
+         <input id="arsat" type = "text"disabled></input>
+         <input id="ht_m_m" type = "text"></input>
+         <p>     تاريخ</p>
+
+        <!--francais--><br><br>
+        <p></p><p></p>
+        <input id="fr_majmo3" type = "text"disabled></input>
+        <input id="fr_mo3amel" type = "text"></input>
+        <input id="fr_m_f" type = "text"disabled ></input>
+        <input id="fr_test" type = "text"></input>
+        <input id="fr_m_m_m" type = "text"disabled ></input>
+        <input id="fr_test2" type = "text"></input>
+        <input id="fr_test1" type = "text"disabled></input>
+        <input id="fr_at" type = "text"disabled></input>
+        <input id="fr_m_m" type = "text"></input>
+        <p>    فرنسية</p>
+
+        <!--anglais--><br><br>
+        <p></p><p></p>
+        <input id="an_majmo3" type = "text"disabled ></input>
+        <input id="an_mo3amel" type = "text"></input>
+        <input id="an_m_f" type = "text"disabled ></input>
+        <input id="an_test" type = "text"></input>
+        <input id="an_m_m_m" type = "text"disabled ></input>
+        <input id="an_test2" type = "text"></input>
+        <input id="an_test1" type = "text"disabled></input>
+        <input id="an_at" type = "text"disabled></input>
+        <input id="an_m_m" type = "text"></input>
+        <p>  إنجليزية</p>
+
+        <!--techno--><br><br>
+        <p></p><p></p>
+        <input id="th_majmo3" type = "text"disabled ></input>
+        <input id="th_mo3amel" type = "text"></input>
+        <input id="th_m_f" type = "text"disabled ></input>
+        <input id="th_test" type = "text"></input>
+        <input id="th_m_m_m" type = "text"disabled ></input>
+        <input id="th_test2" type = "text"></input>
+        <input id="th_test1" type = "text" disabled></input>
+        <input id="th_at" type = "text"></input>
+        <input id="th_m_m" type = "text"></input>
+        <p>   تكنلوجيا</p>
+
+        <!--informatique--><br><br>
+        <p></p><p></p>
+        <input id="in_majmo3" type = "text"disabled ></input>
+        <input id="in_mo3amel" type = "text"></input>
+        <input id="in_m_f" type = "text"disabled ></input>
+        <input id="in_test" type = "text"></input>
+        <input id="in_m_m_m" type = "text"disabled ></input>
+        <input id="in_test2" type = "text"></input>
+        <input id="in_test1" type = "text"disabled ></input>
+        <input id="in_at" type = "text"></input>
+        <input id="in_m_m" type = "text"></input>
+        <p> إعلام الي</p>
+        
+        <!--sport--><br><br>
+        <p></p><p></p>
+        <input id="sp_majmo3" type = "text"disabled ></input>
+        <input id="sp_mo3amel" type = "text"></input>
+        <input id="sp_m_f" type = "text"disabled ></input>
+        <input id="sp_test" type = "text"></input>
+        <input id="sp_m_m_m" type = "text"disabled ></input>
+        <input id="sp_test2" type = "text"></input>
+        <input id="sp_test1" type = "text"disabled ></input>        <input id="ars_at" type = "text"disabled></input>
+
+        <input id="sp_m_m" type = "text"></input>
+        <p>   رياضة</p>
+        <br><br>
+        <input id="mo3adell" type="text" disabled ></input><p>المجموع العام</p>
+        <input id="majmo33"  type="text"disabled ></input><p>المعدل الفصلي</p>
+
+        
+
+        <br><br><br>
+        <button onclick="run()"  onmouseover="animation()" style="width: 150px; height: 50px;" type="button" id="butoon" class="button"><p>حساب المعدل</p></button>
+    </div>    <br><br>
+   
+
+</body>
+
+</html>
