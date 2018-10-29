@@ -66,13 +66,13 @@ if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine
     isMobile = true;
 }
 if(isMobile){alert("لا يعمل هذا الموقع على الهواتف");
+close();}
 var viewMode = getCookie("view-mode");
 if(viewMode == "desktop"){
     viewport.setAttribute('content', 'width=1024');
 }else if (viewMode == "mobile"){
     viewport.setAttribute('content', 'width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no');
 }
-close();}
             var d = new Date(); 
           
           document.getElementById("int").innerHTML = d.toLocaleTimeString();}
